@@ -8,7 +8,21 @@
     <title>Alerta</title>
 </head>
 <body>
-    <h1>Hello Word, Ejs</h1>
+    
+    <form action="/create" method="post">
+        <input type="text" name="task" id="task" placeholder="Insira uma tarefa">
+        <button id="addButton" type="submit">Adicionar</button>
+    </form>
+    <!-- 44 min do video 3 -->
+    <ul>
+        <% tasksList.forEach((task) => { %>
+            <li>
+                 <%= task.task %> | <%= task.date.toLocaleDateString() %>
+            </li>
+
+        <% }) %>
+            
+    </ul>
 
     <script src="script.js"></script>
 </body>
