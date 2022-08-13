@@ -1,0 +1,14 @@
+{
+  "name": "alerta",
+  "version": "1.0.0",
+  "description": "Prjeto de alerta de mensagens",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Natan Mollica",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
