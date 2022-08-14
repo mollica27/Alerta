@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 app.use(routes);
 
-
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
 );
