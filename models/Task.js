@@ -1,19 +1,19 @@
-const mongoose = require('mongoose');
-const { isModuleNamespaceObject } = require('util/types');
+const mongoose = require("mongoose");
+const { isModuleNamespaceObject } = require("util/types");
 
 const taskSchema = new mongoose.Schema({
-    task: {
-        type: String,
-        require: true
-    },
-    check: {
-        type: Boolean,
-        require: true
-    },
-    date: {
-        type: Date,
-        default: Date.now(),
-    },
+  task: {
+    type: String,
+    require: true,
+  },
+  check: {
+    type: Boolean,
+    default: false,
+  },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 module.exports = mongoose.model("Task", taskSchema);

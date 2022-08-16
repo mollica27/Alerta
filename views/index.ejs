@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <title>AlertaGiga</title>
   </head>
   <body>
@@ -15,35 +18,44 @@
       <span id="close-message"><i class="bi bi-x-square"></i></span>
     </section>
     <% } %>
-    
+
     <header>
       <% if (task == null) {%>
-        <h1>GIGA+ ALERTA</h1>
+      <h1>GIGA+ ALERTA</h1>
       <form action="/create" method="post">
-        <input type="text" name="task" id="task" placeholder="Insira uma tarefa"/>
+        <input
+          type="text"
+          name="task"
+          id="task"
+          placeholder="Insira uma tarefa"
+        />
         <button id="addButton" type="submit">Adicionar</button>
       </form>
       <% } else { %>
-        <h1>EDITAR TAREFA:</h1>
+      <h1>EDITAR TAREFA:</h1>
       <form action="/updateOne/<%= task._id %>" method="post">
         <input type="text" name="task" id="task" value="<% task.task %>" />
         <button id="updateButton" type="submit">Atualizar</button>
       </form>
       <% } %>
     </header>
-
     <section id="tasks">
       <ul>
         <% tasksList.forEach((task) => { %>
-        <li>
-              <div>
-                <a href="/"><%= task.task %></a>
-                <span>Criado em <%= task.date.toLocaleDateString() %></span>
-              </div>
-              <div>
-                <a class="btnUpdate" href="/getById/<%= task._id %>/update"><i class="bi bi-pencil-square"></i></a>
-                <a class="btnDelete" href="/getById/<%= task._id %>/delete"><i class="bi bi-trash"></i></a>
-              </div>
+        <li class="check-<%= task.check %>">
+          <div>
+            <a href="/check/<%= task._id %>" class="check-<%= task.check %>"><%= task.task %>
+            </a>
+            <span>Criado em <%= task.date.toLocaleDateString() %></span>
+          </div>
+          <div>
+            <a class="btnUpdate" href="/getById/<%= task._id %>/update"
+              ><i class="bi bi-pencil-square"></i
+            ></a>
+            <a class="btnDelete" href="/getById/<%= task._id %>/delete"
+              ><i class="bi bi-trash"></i
+            ></a>
+          </div>
         </li>
         <% }) %>
       </ul>
@@ -56,8 +68,8 @@
           <h2>Confirmação</h2>
           <a id="close" href="/"><i class="bi bi-x-square"></i></a>
         </div>
-        
-        <hr>
+
+        <hr />
         <p>Deseja realmente apagar a tarefa: <%= teskDelete.task %>?</p>
         <div id="btns">
           <a id="btnNot" href="/">Não</a>
