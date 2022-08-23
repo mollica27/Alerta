@@ -11,6 +11,10 @@
     <title>AlertaGiga</title>
   </head>
   <body>
+    <div id="alert-giga" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <p></p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
     <% if (message != "") { %>
       <%- include('./components/messages', {message: message, type: type})  %>
     <% } %>
