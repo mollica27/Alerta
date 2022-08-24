@@ -8,6 +8,7 @@ routes.get("/getById/:id/:method", TaskController.getById);
 routes.post("/updateOne/:id", TaskController.updateOneTask);
 routes.get("/deleteOne/:id", TaskController.deleteOneTask);
 routes.get("/check/:id", TaskController.taskCheck);
-routes.post("/", AlertContreller.getAllAlerts)
+routes.post("/", AlertContreller.createAlert);
+routes.post("/getByAlert/:require", AlertContreller.getByAlert);
 
 module.exports = routes;

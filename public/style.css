@@ -26,11 +26,6 @@ header h1 {
     color: #202024;
 }
 
-.relatorio {
-    font-size: 25px;
-    text-align: center;
-}
-
 input {
     margin: 0;
     border: none;
@@ -250,6 +245,11 @@ div#btns a#btnYes:hover {
 .message-sucess {
     background-color: rgb(197, 255, 214);
     color: #008a1e;
+}
+
+.message-alert {
+    background-color: rgb(222, 245, 109);
+    color: #c59505;
 }
 
 span#close-message {
