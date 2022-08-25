@@ -9,6 +9,7 @@ routes.post("/updateOne/:id", TaskController.updateOneTask);
 routes.get("/deleteOne/:id", TaskController.deleteOneTask);
 routes.get("/check/:id", TaskController.taskCheck);
 routes.post("/", AlertContreller.createAlert);
-routes.post("/getByAlert/:require", AlertContreller.getByAlert);
+routes.post("/alertHead", AlertContreller.gigaTask);
+
 
 module.exports = routes;

@@ -1,9 +1,9 @@
+// const gigatask = require ("../models/alert");
 
 let alertGiga = "";
 
 const createAlert =  async(req, res) => {
   try {
-    const alertCreate =  alertGiga.match(String)
     return res.render("index", {
       alertCreate,  
       alertGiga,
@@ -13,18 +13,9 @@ const createAlert =  async(req, res) => {
   }
 };
 
-const getByAlert = async (req,res) => {
-    if (alertGiga === "") 
-    return res.render("index",{
-        alertCreate,
-        alertGiga,
-    }); else {
-        require.toString
-        return ("/")
-    }
-};
-
-const gigaAlert = (setInterval(() => {
+const gigaTask = (req,res) => {
+  
+  window.onload = setInterval(() => {
     var dataAtual = new Date();
     var h = dataAtual.getHours();
     var m = dataAtual.getMinutes();
@@ -71,16 +62,18 @@ const gigaAlert = (setInterval(() => {
         alertGiga = "relatorio bklogo,";
         break;
       default:
-          alertGiga = `TENTA DE NOVO`;
-        //   return alertGiga
-            console.log(alertGiga);
+        try {
+          alertGiga = "TENTA DE NOVO",
+          res.redirect("/");
+        }catch (err) {
+          res.status(500).send({ error: err.message });
+        }
+       
     }
-  }, 1000))
-    
-
+  }, 1000);
+}
 
 module.exports = {
-  createAlert,
-  getByAlert
-  
+  gigaTask,
+  createAlert
 };
