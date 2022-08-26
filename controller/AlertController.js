@@ -1,4 +1,4 @@
-// const gigatask = require ("../models/alert");
+const CronJob = require('cron').CronJob
 
 let alertGiga = "";
 
@@ -13,10 +13,8 @@ const createAlert =  async(req, res) => {
   }
 };
 
-const gigaTask = (req,res) => {
-  
-  window.onload = setInterval(() => {
-    var dataAtual = new Date();
+const job = new CronJob('* * * * * *', () => {
+  var dataAtual = new Date();
     var h = dataAtual.getHours();
     var m = dataAtual.getMinutes();
     var horaExata = String(`${h}:${m}`);
@@ -62,18 +60,17 @@ const gigaTask = (req,res) => {
         alertGiga = "relatorio bklogo,";
         break;
       default:
-        try {
-          alertGiga = "TENTA DE NOVO",
-          res.redirect("/");
-        }catch (err) {
-          res.status(500).send({ error: err.message });
-        }
-       
+        alertGiga = "relatorio bklogo,";
     }
-  }, 1000);
-}
+}, null, true, 'America/Sao_Paulo')
 
+const gigaTask = (req,res) => {
+  
+  
+}
+console.log(job)
 module.exports = {
   gigaTask,
-  createAlert
+  createAlert,
+  
 };

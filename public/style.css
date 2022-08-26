@@ -248,8 +248,14 @@ div#btns a#btnYes:hover {
 }
 
 .message-alert {
-    background-color: rgb(222, 245, 109);
-    color: #c59505;
+    background-color: rgb(220, 238, 132);
+    color: #836714;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 8rem;
+    padding: 0 2rem;
 }
 
 span#close-message {
@@ -260,6 +266,17 @@ span#close-message {
 }
 
 span#close-message:hover {
+    color: rgb(255, 0, 0);
+}
+
+a#close-alert {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+    padding-left: 2rem;
+}
+
+a#close-alert:hover {
     color: rgb(255, 0, 0);
 }
 
