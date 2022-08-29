@@ -68,7 +68,7 @@ setInterval( () => {
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
         console.log(alertGiga)
         break;
-      case "17:59":
+      case "18:6":
         alertGiga = "Efetividade - IRR - IFI - Backlog - Parcial de agenda D+1";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
         console.log(alertGiga)
