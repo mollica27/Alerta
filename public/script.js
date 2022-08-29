@@ -1,7 +1,6 @@
 const closeMessage = document.querySelector("#close-message");
 const message = document.querySelector(".message");
 
-
 closeMessage.addEventListener("click", () =>{
     message.style.display = "none";
 });
@@ -79,10 +78,11 @@ setInterval( () => {
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
         console.log(alertGiga)
         break;
-      case "19:59":
+      case "17:54":
         alertGiga = "Efetividade - Backlog - Estoque de Altas -  Reparo  24h - Acumulado  de Altas";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
-        console.log(alertGiga)
+        document.getElementById("audio").play();
+        console.log(alertGiga);
         break;
       default:
         alertGiga = "Aguardando Próximo Alerta!";
