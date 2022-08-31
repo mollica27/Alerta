@@ -1,6 +1,7 @@
 const closeMessage = document.querySelector("#close-message");
 const message = document.querySelector(".message");
 
+
 closeMessage.addEventListener("click", () =>{
     message.style.display = "none";
 });
@@ -9,9 +10,12 @@ setTimeout(() => {
     message.style.display = "none";
 }, 5000);
 
+
+
 document.querySelector("#Callback-btn")
 .addEventListener("click",
 setInterval( () => {
+  let audio = new Audio("./alertSong.mp3");
     var dataAtual = new Date();
     var h = dataAtual.getHours();
     var m = dataAtual.getMinutes();
@@ -21,67 +25,79 @@ setInterval( () => {
       case "07:30":
         alertGiga = "- Backlog - Largada - Prazos";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "08:59":
+      case "09:0":
         alertGiga = "- Abertura";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "09:59":
+      case "10:0":
         alertGiga = "Efetividade - IRR - IFI ";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "10:59":
+      case "11:0":
         alertGiga = "Efetividade - IRR - IFI ";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "11:59":
+      case "12:0":
         alertGiga = "Efetividade - IRR - IFI - Reparo 24h - Backlog - Prazos";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "12:59":
+      case "13:0":
         alertGiga = "Efetividade - IRR - IFI";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "13:59":
+      case "14:0":
         alertGiga = "Efetividade - IRR - IFI - Reparo 24h";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "14:59":
+      case "15:0":
         alertGiga = "Efetividade - IRR - IFI - Prazos";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "15:59":
+      case "16:0":
         alertGiga = "Efetividade - IRR - IFI";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "16:59":
+      case "17:0":
         alertGiga = "Efetividade - IRR - IFI";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "18:10":
+      case "18:0":
         alertGiga = "Efetividade - IRR - IFI - Backlog - Parcial de agenda D+1";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "18:59":
+      case "19:0":
         alertGiga = "Efetividade - IRR - IFI";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.play();
         console.log(alertGiga)
         break;
-      case "17:54":
+      case "20:0":
         alertGiga = "Efetividade - Backlog - Estoque de Altas -  Reparo  24h - Acumulado  de Altas";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
-        document.getElementById("audio").play();
+        audio.play();
         console.log(alertGiga);
         break;
       default:
