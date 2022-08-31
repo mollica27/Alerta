@@ -22,7 +22,7 @@ setInterval( () => {
     var horaExata = String(`${h}:${m}`);
     const relatorio = horaExata;
     switch (relatorio) {
-      case "07:52":
+      case "08:0":
         alertGiga = "- Backlog - Largada - Prazos";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
         audio.play();
