@@ -103,6 +103,7 @@ setInterval( () => {
       default:
         alertGiga = "Aguardando Próximo Alerta!";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
+        audio.pause();
         console.log(alertGiga)
     }  
 },1000));
