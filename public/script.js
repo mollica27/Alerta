@@ -1,7 +1,6 @@
 const closeMessage = document.querySelector("#close-message");
 const message = document.querySelector(".message");
 
-
 closeMessage.addEventListener("click", () =>{
     message.style.display = "none";
 });
@@ -11,11 +10,12 @@ setTimeout(() => {
 }, 5000);
 
 
+// =========Alertas=========
 
 document.querySelector("#Callback-btn")
 .addEventListener("click",
 setInterval( () => {
-  let audio = new Audio("./alertSong.mp3");
+  let audio = new Audio("./final.mp3");
     var dataAtual = new Date();
     var h = dataAtual.getHours();
     var m = dataAtual.getMinutes();
@@ -40,7 +40,7 @@ setInterval( () => {
         audio.play();
         console.log(alertGiga)
         break;
-      case "11:0":
+      case "11:26":
         alertGiga = "Efetividade - IRR - IFI ";
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
         audio.play();
@@ -105,6 +105,8 @@ setInterval( () => {
         document.getElementById("tipoAlert").innerHTML = `<p>  ${alertGiga}  </p>`;
         console.log(alertGiga)
     }  
-},10000));
+},30000));
+
+
 
   

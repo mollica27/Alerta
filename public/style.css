@@ -38,7 +38,7 @@ input {
     color: #fff;
 }
 
-button {
+button.btn-add {
     padding: .6rem;
     background-color: #202024;
     width: 25%;
@@ -52,7 +52,7 @@ button {
     transition: all .3s ease-in-out;
 }
 
-button:hover {
+button.btn-add:hover {
     background-color: #19741c;
     color: #fff;
 }
